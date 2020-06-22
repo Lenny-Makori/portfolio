@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://c.amazon-adsystem.com/aax2/assoc_lra.html?tag=krypsec-21&c=100&src=302&sz=728x90 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<style>
+.p a, .p a:visited { color:gray; text-decoration: none }
+.p {  font-family:Arial;font-size:9px;position:relative; }
+
+.p120x600, .p160x600, .p300x600 { top:-20px; text-align:center; }
+.p728x90,.p300x250,.p468x60,.p180x150 { top:-20px;float:right; margin-right:6px; }
+
+</style>
+
+<script type="text/javascript">
+
+function encodeStr(b) { 
+	return b && encodeURIComponent(b).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); 
+} 
+
+
+function render_lra() { 
+	
+	var params = {};
+	var vars = "";
+	
+	var querystring = window.location.search;
+	if(querystring) vars += querystring.substring(1);
+	
+	vars = vars.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		params[pair[0]] = pair[1];
+	}
+	
+	var src = params["src"];
+	var sz = params["sz"];
+	var channel = params["c"];	
+	var sza = sz.split("x");
+	
+	var privacy_coords = {
+			"728x90":"638,78,728,90", 
+			"300x250":"200,240,300,250", 
+			"468x60":"378,48,468,60", 
+			"300x600":"200,588,300,600", 			
+			"160x600":"33,588,127,600", 
+			"120x600":"33,588,127,600",
+			"180x150":"100,140,180,150" };
+	var mks = {"300":"us","304":"uk","301":"zz","305":"jp","302":"in","303":"fr","306":"de","307":"br"};
+	var mkIds = {"us":"1", "uk":"2", "zz":"1", "jp":"0", "in":"31", "fr":"8", "de":"3", "br":"526970" };
+	var mk = mks[src];
+
+	var privacy_text = {"us":"Privacy", "uk":"Privacy", "zz":"Privacy", "jp":"Privacy", "in":"Privacy", "fr":"Vos pr&eacute;f&eacute;rences", "de":"Datenschutz", "br":"Privacidade" };
+	var nodes = {
+	  "us_728x90":"154606011", "us_300x250":"154606011", "us_468x60":"gc", "us_160x600":"154606011", "us_120x600":"gc",
+	  "fr_728x90":"492180031", "fr_300x250":"492180031", "fr_468x60":"492180031", "fr_160x600":"695398031", "fr_120x600":"492180031",
+	  "de_728x90":"gc", "de_300x250":"1333619031", "de_468x60":"gc", "de_160x600":"530886031", "de_120x600":"gc",
+	  "uk_728x90":"266239", "uk_300x250":"266239", "uk_468x60":"300703", "uk_160x600":"266239", "uk_120x600":"382609011",
+	};
+	var node = nodes[mks[src]+"_"+sz];
+
+	var domain = mk;
+	if(mk=="uk") domain = "co.uk";
+	if(mk=="br") domain = "com.br";	
+	if(mk=="us") domain = "com";
+	
+	var irdomain = "ir-" + mk;
+	if(mk=="us") irdomain = "ir-na";
+	
+	var link = "http://www.amazon." + domain;
+	if(node==null) link += "";
+        else if(node=="gc") link += "/gp/gc";
+	else link += "/b";
+	link += "/ref=assoc_aax_fallback_" + sz;
+	if(node != null && node!="gc") link += "?node=" + node + "&"; else link += "?"
+	link += "tag=" + params["tag"] + "&linkCode=ur8";
+	var privacy_link = "http://www.amazon."+domain+"/gp/dra/info";
+	
+	var img = "http://c.amazon-adsystem.com/aax2/lra/imgs/assoc_lra_s1_"+mk+"_"+sz+".gif?p2";
+	var html = "";
+	html += '<map name="boxmap">';
+	html += '<area shape="rect" coords="'+privacy_coords[sz]+'" href="  alt="">';
+	html += '<area coords="0,0,10000,10000" href="'+link+'" target="_blank"></map>';
+	html += '<a href="'+link+'" target="_blank"><img border=0 src="'+img+'"></a>';
+	html += '<div class="p p'+sz+'"><a href="'+privacy_link+'" target="_blank">'+privacy_text[mk]+'</a></div>';
+		
+	html += "<iframe src='http://s.amazon-adsystem.com/iu3?d=assoc-amazon.com&rP=" + encodeStr( (window.location != window.parent.location)  ? document.referrer : document.location ) + "&cB=" + Math.random() * 1E16 + "' width=1 height=1 frameborder=0 marginwidth=0 marginheight=0></iframe>";
+	if(channel!=99) html += "<img src=\"http://"+irdomain+".amazon-adsystem.com/e/ir?t="+params["tag"]+"&l=ur8&o="+mkIds[mk]+"&camp=0&creative=0"+ "&cB=" + Math.random() * 1E16 +"\" width=\"1\" height=\"1\" border=\"0\" style=\"border:none !important; margin:0px !important;\" />";
+	
+	document.write(html);
+	document.close();
+
+} 
+
+render_lra();
+
+</script><map name="boxmap"><area shape="rect" coords="638,78,728,90" href="https://c.amazon-adsystem.com/aax2/alt=" "=""><area coords="0,0,10000,10000" href="http://www.amazon.in/ref=assoc_aax_fallback_728x90?tag=krypsec-21&amp;linkCode=ur8" target="_blank"></map><a href="http://www.amazon.in/ref=assoc_aax_fallback_728x90?tag=krypsec-21&amp;linkCode=ur8" target="_blank"><img border="0" src="./assoc_lra_s1_in_728x90.gif"></a><div class="p p728x90"><a href="http://www.amazon.in/gp/dra/info" target="_blank">Privacy</a></div><iframe src="./iu3.html" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0"></iframe><img src="./ir" width="1" height="1" border="0" style="border:none !important; margin:0px !important;"> 	
+</body></html>
